@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/movieflix/category")
@@ -21,9 +22,26 @@ public class CategoryController {
         return categoryService.findAll();
     }
 
+    //PathVariable extrai o valor da variável id da URL
+    @GetMapping("/{id}")
+    public Category getCategoryById(@PathVariable Long id) {
+        Optional<Category> categorySearch = categoryService.findById(id);
+        if (categorySearch.isPresent()) {
+            return categorySearch.get();
+        }
+        return null;
+    }
+
+    //RequestBody converte o JSON do corpo da requisição em um objeto Java
     @PostMapping
     public Category saveCategory (@RequestBody Category category) {
         return  categoryService.saveCategory(category);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteCategoryById(@PathVariable Long id) {
+        categoryService.deleteById(id);
+    }
+
 
     }
