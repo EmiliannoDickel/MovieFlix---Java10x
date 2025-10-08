@@ -2,7 +2,7 @@ package com.dickel.movieflix.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+//adicionado builder para
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
