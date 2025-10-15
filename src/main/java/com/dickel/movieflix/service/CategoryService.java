@@ -14,14 +14,14 @@ public class CategoryService {
     private final CategoryRepository categoryRepository;
 
     public List<Category> findAll() {
-        return categoryRepository.findAll();
+       return categoryRepository.findAll();
     }
 
     public Optional<Category> findById(Long id) {
         return categoryRepository.findById(id);
     }
 
-    public Category saveCategory (Category category) {
+    public Category save (Category category) {
         return categoryRepository.save(category);
     }
 
