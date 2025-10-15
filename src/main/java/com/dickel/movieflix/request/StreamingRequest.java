@@ -1,4 +1,7 @@
 package com.dickel.movieflix.request;
 
-public record StreamingRequest() {
+import lombok.Builder;
+
+@Builder
+public record StreamingRequest(String name) {
 }
