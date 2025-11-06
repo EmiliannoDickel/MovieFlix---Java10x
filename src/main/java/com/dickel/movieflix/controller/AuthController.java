@@ -8,6 +8,7 @@ import com.dickel.movieflix.response.LoginRequest;
 import com.dickel.movieflix.response.LoginResponse;
 import com.dickel.movieflix.response.UserResponse;
 import com.dickel.movieflix.service.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,13 +30,13 @@ public class AuthController {
     private final TokenService tokenService;
 
     @PostMapping("/register")
-   public ResponseEntity<UserResponse> save (@RequestBody UserRequest request){
+   public ResponseEntity<UserResponse> save (@Valid @RequestBody UserRequest request){
         User userSaved = UserMapper.toUserRequest(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(UserMapper.toUserResponse(userService.save(userSaved)));
     }
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login (@RequestBody LoginRequest request){ //aqui esta a logica de autenticação
+    public ResponseEntity<LoginResponse> login (@Valid @RequestBody LoginRequest request){ //aqui esta a logica de autenticação
         UsernamePasswordAuthenticationToken userAndPassword = new UsernamePasswordAuthenticationToken(request.email(), request.password());
         Authentication authentication = authenticationManager.authenticate(userAndPassword); //usa o auth manager la do security config para autenticar
 
