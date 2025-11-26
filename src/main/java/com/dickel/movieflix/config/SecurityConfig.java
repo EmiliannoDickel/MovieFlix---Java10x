@@ -1,5 +1,6 @@
 package com.dickel.movieflix.config;
 
+import jakarta.servlet.DispatcherType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +29,12 @@ public class SecurityConfig {
        return http
                .csrf(csrf -> csrf.disable()) // desabilita a proteção do spring padrao
                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //configura para toda request verificar se e de alguem autenticado
-               .authorizeHttpRequests(authorizeRequests -> authorizeRequests.requestMatchers(HttpMethod.POST, "/movieflix/auth/register").permitAll().requestMatchers(HttpMethod.POST, "/movieflix/auth/login").permitAll() // aqui libera para todo mundo que acessar a rota de autenticação adiciondas
+               .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+                       .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
+                       .requestMatchers(HttpMethod.POST, "/movieflix/auth/register").permitAll()
+                       .requestMatchers(HttpMethod.POST, "/movieflix/auth/login").permitAll() // aqui libera para todo mundo que acessar a rota de autenticação adiciondas
+                       .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+                       .requestMatchers("/api/api-docs/**", "/swagger/**").permitAll() // libera o acesso ao swagger
                        .anyRequest().authenticated()) // aqui pede para qualquer outra requisição estar autenticada
                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                .build();
