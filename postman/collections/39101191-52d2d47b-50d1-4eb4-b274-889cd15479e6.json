@@ -1,0 +1,624 @@
+{
+	"info": {
+		"_postman_id": "39101191-52d2d47b-50d1-4eb4-b274-889cd15479e6",
+		"name": "movieflix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GET category",
+					"id": "39101191-c2aefea8-f3b6-4899-9d80-74019f4d25c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/movieflix/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movieflix",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST category",
+					"id": "39101191-30b3c80a-ffec-457a-becc-8ba540816363",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste Emilianno\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movieflix/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movieflix",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET category ID",
+					"id": "39101191-d042b046-a799-4fe1-893b-e58cbfa6fccd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}category/6",
+							"host": [
+								"{{localhost}}category"
+							],
+							"path": [
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE category ID",
+					"id": "39101191-fbf7bb0c-a524-4dc3-bcb2-6afd7501a903",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}category/6",
+							"host": [
+								"{{localhost}}category"
+							],
+							"path": [
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "39101191-89cefe24-a807-44a9-9f8d-a8045c14b100"
+		},
+		{
+			"name": "Streaming",
+			"item": [
+				{
+					"name": "GET streaming",
+					"id": "39101191-8e63d67c-bb64-4492-bba9-6237ac25484f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}streaming",
+							"host": [
+								"{{localhost}}streaming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST streaming",
+					"id": "39101191-c4431235-d3de-45cf-80a4-7274890549eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"EXCLUIR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}streaming",
+							"host": [
+								"{{localhost}}streaming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET streaming ID",
+					"id": "39101191-25396102-8742-4007-9ed7-801b494a1df1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}streaming/2",
+							"host": [
+								"{{localhost}}streaming"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE streaming ID",
+					"id": "39101191-fd3aa208-925c-458a-97f7-1b46a748d1a3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}streaming/2",
+							"host": [
+								"{{localhost}}streaming"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "39101191-13d078b2-9aaf-4dc4-8b5a-a4933b8dcc6d"
+		},
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "GET movie",
+					"id": "39101191-1215fefd-9faf-4566-b9ba-d570ebf0abba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlbWlkdWRpY2tlbEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsIm5hbWUiOiJFbWlsaWFubm8iLCJleHAiOjE3NjE4NjkxMzYsImlhdCI6MTc2MTc4MjczNiwiaXNzIjoiQVBJIE1vdmllZmxpeCJ9._wSAnZ_TuGktw-IJJp6Qz2qYUajQC5DGCglb9162Nxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}movies",
+							"host": [
+								"{{localhost}}movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST movie",
+					"id": "39101191-d4a4f1b5-0c01-4e1b-b477-9b590afc51b7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Teste Emilianno\",\r\n    \"description\": \"Teste\",\r\n    \"releaseDate\": \"21/10/2025\",\r\n    \"rating\": 3.0,\r\n    \"categories\": [\r\n        12\r\n    ],\r\n    \"streamings\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}movies",
+							"host": [
+								"{{localhost}}movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET movie ID",
+					"id": "39101191-e8bc8fe4-8e21-40fc-afef-766a7d80e80e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlbWlkdWRpY2tlbEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsIm5hbWUiOiJFbWlsaWFubm8iLCJleHAiOjE3NjI0Njk1NjksImlhdCI6MTc2MjM4MzE2OSwiaXNzIjoiQVBJIE1vdmllZmxpeCJ9.rDCrv5F8R0hoXagTpYktTEFCBB_tiONCCimH-ULIUfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"De volta para o futuro\",\r\n    \"description\": \"O adolescente Marty McFly é transportado para o ano de 1955 quando uma experiência do excêntrico cientista Doc Brown é malsucedida.\",\r\n    \"releaseDate\": \"1985-01-01\",\r\n    \"rating\": 9.9,\r\n    \"categories\": [\r\n        1, 2, 3, 9, 10, 11\r\n    ],\r\n    \"streamings\": [1]\r\n}"
+						},
+						"url": {
+							"raw": "{{localhost}}movies/1",
+							"host": [
+								"{{localhost}}movies"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE movie ID",
+					"id": "39101191-954102b7-fda9-4635-b92d-b1927e93ba4c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Os Caça-Fantasmas\",\r\n    \"description\": \"Um grupo de cientistas desempregados decide abrir um negócio de caça a fantasmas em Nova York, enfrentando entidades sobrenaturais com equipamentos de alta tecnologia.\",\r\n    \"releaseDate\": \"08/06/1984\",\r\n    \"rating\": 7.5,\r\n    \"categories\": [1, 2, 3, 9, 10, 11],\r\n    \"streamings\": [1]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}movies/3",
+							"host": [
+								"{{localhost}}movies"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET movie BY category",
+					"id": "39101191-0561057d-75c7-493e-a905-a2f22031a8a3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlbWlkdWRpY2tlbEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsIm5hbWUiOiJFbWlsaWFubm8iLCJleHAiOjE3NjI0Njk1NjksImlhdCI6MTc2MjM4MzE2OSwiaXNzIjoiQVBJIE1vdmllZmxpeCJ9.rDCrv5F8R0hoXagTpYktTEFCBB_tiONCCimH-ULIUfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Os Caça-Fantasmas\",\r\n    \"description\": \"Um grupo de cientistas desempregados decide abrir um negócio de caça a fantasmas em Nova York, enfrentando entidades sobrenaturais com equipamentos de alta tecnologia.\",\r\n    \"releaseDate\": \"08/06/1984\",\r\n    \"rating\": 7.5,\r\n    \"categories\": [1, 2, 3, 9, 10, 11],\r\n    \"streamings\": [1]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{localhost}}movies/search?categoryId=12",
+							"host": [
+								"{{localhost}}movies"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE movie ID",
+					"id": "39101191-fe3f7d58-d57b-4f77-9da9-a8cfc20c8070",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Os Caça-Fantasmas\",\r\n    \"description\": \"Um grupo de cientistas desempregados decide abrir um negócio de caça a fantasmas em Nova York, enfrentando entidades sobrenaturais com equipamentos de alta tecnologia.\",\r\n    \"releaseDate\": \"08/06/1984\",\r\n    \"rating\": 7.5,\r\n    \"categories\": [1, 2, 3, 9, 10, 11],\r\n    \"streamings\": [1]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{localhost}}movies/5",
+							"host": [
+								"{{localhost}}movies"
+							],
+							"path": [
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "39101191-1b01c06e-b559-40e4-8e4d-e54e3d8454a2"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "POST register user",
+					"id": "39101191-e39decf8-d8de-46b7-85e5-23bf396ae2c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"Gio\",\r\n\"email\": \"gio@gmail.com\",\r\n\"password\": \"teste\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}auth/register",
+							"host": [
+								"{{localhost}}auth"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST login user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "577bed41-5d16-494d-b4c4-47619b14f5e5",
+								"exec": [
+									"var body = pm.response.json()\r",
+									"pm.collectionVariables.set(\"Token\", body.Token)"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "39101191-13c63715-7807-4bd3-8922-e86a18ed7625",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"gio@gmail.com\",\r\n\"password\": \"teste\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}auth/login",
+							"host": [
+								"{{localhost}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "39101191-c734a4df-8786-4b52-8e89-5d14e59b692b"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ca62d4fe-c72e-4e8e-abf4-626f5546227d",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1f834439-ec14-4855-9e98-92d912299e31",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": ""
+		},
+		{
+			"key": "Token",
+			"value": ""
+		}
+	]
+}
