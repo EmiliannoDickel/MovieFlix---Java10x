@@ -1,0 +1,10 @@
+Criei esse projeto com intregração com o Docker.
+para rodar o projeto, siga os passos abaixo:
+
+1. Verificar se tem o docker instalado na maquina.
+docker-compose up --build
+
+2. Após subir o sistema, a documentação da API estará disponível em:
+ http://localhost:8080/swagger-ui.html
+
+ deixei o .env junto no github, pois não tem nenhuma variável sensível.
