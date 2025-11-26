@@ -8,3 +8,5 @@ docker-compose up --build
  http://localhost:8080/swagger-ui.html
 
  deixei o .env junto no github, pois não tem nenhuma variável sensível.
+
+ 3. Para rodar as APIs criadas, tem que criar um user ou entrar com algum existente, e ai autenticar com Bearer Token.
