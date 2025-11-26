@@ -11,13 +11,16 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
-    
+  
   flyway:
     enabled: true
     
-  movieflix:
-    security:
-      secret: "5J0xS7dE9hB1F2k93xMZz7rNlg6VFeJzKZx7gH5Q3JpA6VqH7TjW8zD2lC9mXyPn"
-    
+springdoc:
+  api-docs:
+    path: /api/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
 
-
+movieflix:
+  security:
+    secret: ${MOVIEFLIX_SECURITY_SECRET}
